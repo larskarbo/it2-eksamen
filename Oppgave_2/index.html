@@ -1,0 +1,44 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Regjeringsalternativ 2017</title>
+	<link rel="stylesheet" type="text/css" href="style/styles.css" />
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="paper">
+			<h1>Regjeringsalternativ 2017</h1>
+
+			<p>Oppgi beslutning i prosent for begge regjeringsalternativa:</p>
+			<form id="form">
+				<label for="rg">Raud-grøn: </label>
+				<input type="number" id="rg" name="rg" min=0 />
+				<label for="borgarleg">Borgarleg: </label>
+				<input type="number" id="borgarleg" name="borgarleg" min=0 />
+				<button type="submit">Regn ut</button>
+			</form>
+
+			<p id="output"></p>
+			<p id="storste"></p>
+
+			<div style="width:400px">
+				<canvas id="diagram"></canvas>
+			</div>
+
+		</div>
+	</div>
+
+
+	<script src="js/libraries/Chart.bundle.js"></script>
+	<script src="js/js.js"></script>
+
+</body>
+
+
+
+
+
+
+
+</html>

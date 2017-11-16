@@ -1,0 +1,20 @@
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+	<title>Skoleval 2017</title>
+
+	<h1>Skoleval 2017</h1>
+
+	<p><a href="opptelling">Vis opptelling</a></p>
+
+	<h2>Logg inn her</h2>
+	<form method="POST" action="/">
+		<label for="pass">Passord: </label>
+		<input type="password" id="pass" name="pass" />
+		<button type="submit">Logg inn</button>
+	</form>
+
+	{{err}}
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+	<title>Stem</title>
+
+	<h1>Her kan du stemme</h1>
+
+	<form method="POST" action="/stemme">
+		<label for="parti">Velg parti: </label>
+		<select id="parti" name="parti">
+		  <option value="Rødt">Rødt</option> 
+		  <option value="SV">SV</option> 
+		  <option value="A">Arbeiderpartiet</option> 
+		  <option value="SP">Senterpartiet</option> 
+		  <option value="MDG">Miljøpartiet</option> 
+		  <option value="KrF">KrF</option> 
+		  <option value="V">Venstre</option> 
+		  <option value="H">Høyre</option> 
+		  <option value="FrP">FrP</option> 
+		  <option value="PIR">Piratpartiet</option> 
+		</select>
+
+		<p id="melding"></p>
+
+		<button type="submit">Stem</button>
+	</form>
+
+
+	<script src="stemme.js"></script>
+
+{% endblock %}

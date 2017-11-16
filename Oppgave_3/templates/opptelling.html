@@ -1,0 +1,32 @@
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+	<title>Opptelling</title>
+
+	<h1>Opptelling</h1>
+
+	<p><a href="/">Gå til innlogging</a></p>
+
+	<table cellspacing=0 cellpadding=0>
+		<tr>
+			<th>Parti</th>
+			<th>Val 2013</th>
+			<th class="utheva">Skoleval 2017</th>
+			<th>Endring</th>
+		</tr>
+		{% for parti in stemmer %}
+		<tr>
+			<td>{{parti.navn}}</td>
+			<td>{{parti.prosent2013}}%</td>
+			<td class="utheva">{{parti.prosent}}%</td>
+			{% if(parti.endring>0) %}
+				<td class="pos">+{{parti.endring}}</td>
+			{% else %}
+				<td class="neg">{{parti.endring}}</td>
+			{% endif %}
+		</tr>
+		{% endfor %}
+	</table>
+
+{% endblock %}
